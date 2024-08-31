@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Quick View</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   
+</head>
+<style>
+
+</style>
+<body>
+ <!-- head section -->
+  <header class="header">
+    <h1 class="logo">Resto</h1>
+        
+        <ul class="ul-list">
+            <li class="li-lst"><a href="">Home</a></li>
+            <li class="li-lst"><a href="#Popular-desh">Dishes</a></li>
+            <li class="li-lst"><a href="#About">About</a></li>
+            <li class="li-lst"><a href="#Our Menu TODAY'S SPECIALITY">Menu</a></li>
+           
+            <li class="li-lst"><a href="#Order">Order</a></li>
+            <li class="li-lst"><a href="#footer">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="icons d-flex">
+        <i class="fa-solid fa-bars mx-2" id="Menu"></i>
+        
+        <i class="fa-solid fa-cart-plus" id="cart-icon"></i>
+    </div>
+  </header>
+     
+  <div class="cart">
+    <div class="cart-title">Cart Items</div>
+    <div class="cart-content">
+      
+     
+
+    
+   
+    </div>
+    
+  <div class="total">
+    <div class="total-title">Total</div>
+    <div class="total-price">Rs.0</div>
+  </div>
+
+  <button class="btn-buy">Place Order</button>
+
+  <ion-icon name="close" id="cart-close" class="text-danger">x</ion-icon>
+
+  </div>
+  <div class="banner">
+    <div class="btngroup my-5">
+        <div class="left">
+            <i class="fa-solid fa-arrow-left" id="left"></i>
+        </div>
+        <div class="riht">
+            <i class="fa-solid fa-arrow-right" id="right">
+
+            </i></div>
+    </div>
+    <div class="container">
+       <div class="row my-5">
+        
+        <div class="col-md-6 col-md-6 col-12 my-5">
+            <div class="cards text-center">
+                <h6 class="text-success" id="titles"></h6>
+                <h1 id="paras">Fried Chicken</h1>
+                <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Sit Natus Dolor Cumque?</p>
+                <button class="btn btn-success px-5">viwe-more</button>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-6 col-12">
+            <div class="cards">
+                <img src="" alt="" class="img-fluid" id="picer">
+            </div>
+        </div>
+       
+       </div>
+    
+    </div>
+    
+ </div>
+
+    <main>
+    <section id="Popular-desh" class="my-5">
+        <div class="carttitle text-center my-5">
+
+           <h6 class="text-success">Our Dishes </h6>
+           <h1>POPULAR DISHES</h1>
+        </div>
+        <div class="container-fluid mx-2 ">
+            <div class="row" id="product-list">
+                <!-- Product cards will be injected here -->
+            </div>
+        </div>
+
+        <!-- Product Quick View Modal -->
+        <div class="modal fade quick-view-modal" id="quickViewModal" tabindex="-1" role="dialog" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="quickViewModalLabel">Product Quick View</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="quickViewContent">
+                            <!-- Quick view content will be injected here -->
+                        </div>
+                        <div class="d-flex justify-content-between total font-weight-bold mt-4">
+                            <span>Total</span><span> <button type="button" class="btn btn-secondary add-cart cartadd" id="addtocart">Secondary</button></span>
+                          </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- aboutes -->
+    <section  id="About">
+        <div class="text-center my-5">
+          <h6><Strong>About Us</Strong></h6>
+          <h1>WHy Choose us</h1>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                  <div class="cards">
+                      <img src="https://media.istockphoto.com/id/1139074080/photo/dumplings-gyozas-potstickers.jpg?s=612x612&w=0&k=20&c=oawV9WGrv0u-3sG0eNXj8j3czQMRUE0WRLoikP0XwEc=" alt="" class="img-fluid">
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                  <div class="cards my-5">
+                     <h1>Best Food In The Country</h1>
+                     <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Dolore. Sequi Corrupti Corporis Quaerat Voluptatem ipsam Neque Labore Modi Autem. Saepe Numquam Quod Reprehenderit Rem? Tempora Aut Soluta Odio Corporis Nihill Lorem Ipsum Dolor Sit Amet. Consectetur Adipisicing Elit. Aperiam, Nemo. Sit Porro lilo Eos Cumque Deleniti Iste Alias. Eum Natus</p>
+                     <div class="btn-grups">
+                      <button class="btn btn-outline-secondary">Free Delivery</button>
+                      <button class="btn btn-outline-secondary">Easy Payments</button>
+                      <button class="btn btn-outline-secondary">24/7 Service</button>
+                  </div>
+                 
+                  </div>
+                  <button class="btn btn-success mx-5">Learn More</button>
+                  
+              </div>
+          </div>
+        </div>
+       </section>
+           
+     <!-- Our Menu TODAY'S SPECIALITY -->
+      <section id="Our Menu TODAY'S SPECIALITY" class="my-5">
+        <div class="text-center">
+           <h6> Our Menu </h6>
+           <h1>TODAY'S SPECIALITY</h1>
+        </div>
+    <div class="container-fluid">
+    <div class="row" id="productlisting">
+     
+     
+      
+    </div>
+    </div> 
+ 
+<!-- Product Quick View Modal -->
+    <!-- Product Quick View Modal -->
+    <div class="modal fade quick-view-modal" id="quickViewModals" tabindex="-1" role="dialog" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quickViewModalLabel">Product Quick View</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="quicContent">
+                        <!-- Quick view content will be injected here -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+      </section>
+      <!-- riwesection -->
+       <section id="Review">
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <!-- Review Section -->
+                <div class="col-md-12">
+                    <h2 class="text-center">Customer Reviews</h2>
+                    <div class="reviews my-5">
+                        <div class="review-card">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="col-md-6">
+                                        <img src="https://via.placeholder.com/100" alt="Customer 1" class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h4>John Doe</h4>
+                                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor neque sed nunc venenatis, id sagittis ligula bibendum.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="col-md-6">
+                                        <img src="https://via.placeholder.com/100" alt="Customer 1" class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h4>John Doe</h4>
+                                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor neque sed nunc venenatis, id sagittis ligula bibendum.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="col-md-6">
+                                        <img src="https://via.placeholder.com/100" alt="Customer 1" class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h4>John Doe</h4>
+                                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor neque sed nunc venenatis, id sagittis ligula bibendum.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="col-md-6">
+                                        <img src="https://via.placeholder.com/100" alt="Customer 1" class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h4>John Doe</h4>
+                                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor neque sed nunc venenatis, id sagittis ligula bibendum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <!-- Add more reviews as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+     <section class="gallery">
+        <div class="container-fluid mt-5">
+            <h2 class="text-center">Gallery</h2>
+            <div class="row">
+                <!-- Gallery Item 1 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <a href="https://via.placeholder.com/800x600" data-lightbox="gallery">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW_edjXrPj4N32nZKQxFBMOqGspDfTOX6qTA&s" class="img-fluid rounded" alt="Chicken Dish 1">
+                    </a>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <a href="https://via.placeholder.com/800x600" data-lightbox="gallery">
+                        <img src="https://c1.wallpaperflare.com/preview/710/922/526/chicken-food-lunch-meal.jpg" class="img-fluid rounded" alt="Chicken Dish 2">
+                    </a>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <a href="https://via.placeholder.com/800x600" data-lightbox="gallery">
+                        <img src="https://media.istockphoto.com/id/508345848/photo/grilled-chicken-legs.jpg?s=612x612&w=0&k=20&c=udlSRhW1K7kprBSxSjZ9HoO5YeCYUNOHqY3-BTGpXWI=" class="img-fluid rounded" alt="Chicken Dish 3">
+                    </a>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <a href="https://via.placeholder.com/800x600" data-lightbox="gallery">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW2TvlD1K6BDbBqB_lRxrdZQLls6A0ZdVWMA&s" class="img-fluid rounded" alt="Chicken Dish 3">
+                    </a>
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </div>
+     </section>
+      
+      <!-- Order Now FREE AND FAST -->
+      <section id="Order">
+        <div class="container my-5">
+        <div class="centerforment">
+            <div class="text-center">
+                <h6 class="text-success">Order Now </h6>
+                <h2>FREE AND FAST</h2>
+            </div>
+            <form action="" class=" mx-auto px-5 py-5" id="form">
+                <div class="container">
+                    <div class="row">
+                 
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="groupelement">
+                                <label for="">Your Number</label>
+                                <input type="text" class="form-control" id="username1">
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="groupelement">
+                                <label for="">Your Number</label>
+                                <input type="text" class="form-control" id="username2">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="groupelement">
+                                <label for="">Your Order</label>
+                                <input type="text" class="form-control" id="YourOrder">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="groupelement">
+                                <label for="">Additional Food</label>
+                                <input type="text" class="form-control" id="addfood">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="groupelement">
+                                <label for="">How Musch</label>
+                                <input type="number" class="form-control" id="Musch">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="groupelement">
+                                <label for="">Date And Time</label>
+                                <input type="date" class="form-control" id="datetime">  <div ></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="groupelement">
+                                <label for="">message1</label>
+                               <textarea name="" id="message1" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="groupelement">
+                                <label for="">message2</label>
+                               <textarea name="" id="message2" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button class="my-5 btn btn-primary px-5" type="submit">Order</button>
+                </div>
+            </form>
+        </div>
+        </div>
+       </section>
+        <!-- Main Content -->
+    <div class="container mt-5">
+        <!-- Your website content here -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><strong>Address:</strong> 123 Chicken Street, Flavor Town, USA</p>
+                    <p><strong>Phone:</strong> +123-456-7890</p>
+                    <p><strong>Email:</strong> info@chickenrestaurant.com</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Home</a></li>
+                        <li><a href="#" class="text-light">Menu</a></li>
+                        <li><a href="#" class="text-light">About Us</a></li>
+                        <li><a href="#" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled d-flex">
+                        <li class="mr-3"><a href="#" class="text-light"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="mr-3"><a href="#" class="text-light"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-3"><a href="#" class="text-light"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2024 Chicken Restaurant. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </main>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="scrp.js"></script>
+</body>
+</html>
+
